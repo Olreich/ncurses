@@ -1,0 +1,23 @@
+NCurses for Go
+
+Build Instructions:
+    Should just be a simple make && make install (possibly with a sudo thrown
+in for good measure). It's only been tested to build on Ubuntu 10.10x64, so
+your mileage may vary. Unfortunately, I don't really get Makefiles and the
+build ideology of C, so I probably can't help with build failures and such.
+
+January 9th:
+    The first commit. Has basic functionality, missing a few major pieces, and
+the constants that I stole need a pretty major overhaul to be easy to use.
+Mouse constants look fairly pretty though. I'm planning on continuing the port
+and getting 90% or more of the functionality that curses supports, as well as
+somewhat of an abstraction layer to make colors, windows, pads, and other such
+stuff easier to use and implement. I'm not currently planning on making
+extensions for the extra packages such as panels or menus, since those are easy
+enough to implement on your own.
+    Also on the list for the future is a masking system of some kind so that
+one can use PDCurses, NCurses, and etcCurses all without ever caring what
+curses is installed. This will definitely be for the latest versions of those
+only, as I don't have the time to handle 6-10 versions of each kind of curses.
+SVr4 will be the implementation standard once I start fiddling with that, then
+having added components that the other projects put on top of that.
